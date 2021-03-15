@@ -89,14 +89,13 @@ body {
 
 .imagehead {
     width: 100%;
-    height: 300px;
-    background: url(../images/SS21_RUN_Flow_OldSite_MB_Cogen.webp);
-    background-size: cover;
+    margin-top: 60px;
 }
 
-.imagehead img{
+img {
     width: 100%;
     height: auto;
+    
 }
 
 .txt_imagehead {
