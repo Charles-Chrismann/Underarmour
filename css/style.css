@@ -1,0 +1,143 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    transition: transform 250ms ease-out;
+}
+
+.global-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    height: 60px;
+    padding: 0 20px;
+    overflow: visible;
+    z-index: 95;
+}
+
+.header-icons-left{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 80px;
+}
+
+.header-icons-right{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 100px;
+}
+
+.header-icons-left i{
+    font-size: 1.5em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-right i{
+    font-size: 1.8em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-left svg{
+    height: 25px;
+    width: 31px;
+}
+
+.primary-logo{
+    height: 60px;
+    width: 60px;
+}
+
+.primary-logo img{
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navigation-mobile__text, .primary-logo__text {
+    left: -999em;
+    position: absolute;
+}
+
+@media screen and (max-width: 767px){
+    h1 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+
+.imagehead {
+    width: 100%;
+    height: 300px;
+    background: url(../images/SS21_RUN_Flow_OldSite_MB_Cogen.webp);
+    background-size: cover;
+}
+
+.imagehead img{
+    width: 100%;
+    height: auto;
+}
+
+.txt_imagehead {
+    text-align: center;
+
+}
+
+.txt_imagehead h3 {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+
+}
+
+.txt_imagehead h4 {
+    font-weight: 400;
+    color: #1d1d1d;
+
+}
+
+.link_imagehead {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link_imagehead a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+
+}
+
+.button{
+    border: 2px solid #1d1d1d;   
+    border-radius: 5px; 
+    align-items: center;
+    padding: 7px 10px;
+
+    
+}
