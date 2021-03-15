@@ -163,8 +163,112 @@ img {
 }
 
 .link_mainperformant{
+}
+
+/* Partie Vente */
+
+.main_vente { 
+    margin-top: 60px;
+    text-align: center;
+}
+
+.main_vente h3 {
+    font-weight: 400;
+    color: #1d1d1d;
+    
+
+}
+.main_vente h2 {
+    font-size: 26px;
+    margin: 0 0 20px 0;
+
+}
+
+.link_vente {
+
     text-align: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+
 }
+
+.link_vente a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+.image_vente {
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background-size: cover;
+}
+
+/* nouveauté */
+
+.main_nouveauté { 
+    margin-top: 60px;
+    text-align: center;
+}
+
+.main_nouveauté h3 {
+    font-weight: bold;
+    color: #1d1d1d;
+}
+.main_nouveauté p {
+        text-align: center;
+    }
+
+    .link_nouveauté {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .link_nouveauté a{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0 5px;
+        margin-bottom: 10px;
+    }
+
+    .image_nouveauté {
+        margin-top: 50px;
+        width: 100%;
+        height: 250px;
+        background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+        background-size: cover;
+    }
+
+    /* vestes ua */
+
+    .main_acheter { 
+        margin-top: 60px;
+        text-align: center;
+    }
+    
+    .main_acheter h3 {
+        font-weight: bold;
+        color: #1d1d1d;
+    }
+
+    
+        .link_acheter a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            font-size: 12px;
+            margin: 0 5px;
+            margin-bottom: 10px;
+        }
+
