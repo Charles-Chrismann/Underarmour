@@ -2,9 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     
     height: 100vh;
 
+=======
+>>>>>>> e85bcfbe0c14f0cc59f13651ba2111a6b98b308c
 }
 
 header{
@@ -102,6 +105,11 @@ a {
     }
 }
 
+.main_imagehead{
+    margin-top: 60px;
+}
+
+
 .main_container{
     margin-top: 50px;
     text-align: center;
@@ -110,11 +118,46 @@ a {
 .main_image{
     width: 100%;
     margin-top: 60px;
-    height: auto;
+    height: 250px;
+}
+
+.image_vente {
+    height: 400px;
+    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background-size: cover;
+}
+
+.image_nouveaute {
+    height: 400px;
+    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background-size: cover;
+}
+
+.image_soutien-gorge{
+    height: 400px;
+    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
+    background-size: cover;
 }
 
 .main_txt{
     text-align: center;
+    margin-top: 40px;
+}
+
+.main_txt-head{
+    text-align: center;
+}
+
+.main_txt-head h3{
+    font-size: 28px;
+    margin: 0 0 0 0;
+}
+
+.main_txt-head h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #1d1d1d;
+
 }
 
 .main_link {
@@ -128,6 +171,7 @@ a {
     border: 2px solid #1d1d1d;   
     border-radius: 5px; 
     align-items: center;
+    margin: 3px;
     padding: 7px 10px;
     cursor: pointer; 
 }
@@ -137,7 +181,7 @@ a {
     flex: 1 0 50%;
     text-align: center;  
     cursor: pointer;
-    height: auto;
+    /*height: auto;*/
 }
 
 .main_soutienGorge_legging .button:hover{
@@ -145,10 +189,6 @@ a {
     opacity: 1;
     color: black;
     font-weight: bold;
-}
-
-.image_soutien-gorge{
-    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
 }
 
 .main_soutienGorge_legging .soutien-gorge,
@@ -184,29 +224,33 @@ a {
 }
 
 .main_rubrique { 
-    margin-top: 60px;
+    margin-top: 120x;
     text-align: center;
 }
 
 .main_rubrique h2 {
-    font-size: 26px;
-    margin: 0 0 20px 0;
+    font-size: 30px;
+    margin: 0 0 10px 0;
 }
 
 .main_rubrique h3 {
+    margin-top: 100px;
     font-weight: 400;
     color: #1d1d1d;
+    margin: 0 0 5 0;
 }
 
 .main_txt h3{
     margin-top: 0;
     font-weight: 900;
-    font-size: 27px;
+    font-size: 14px;
 }
 
 .main_txt h4{
     font-weight: normal;
-    font-size: 13px;
+    font-size: 14px;
+    color: #1d1d1d;
+    margin: 0 70px 5px 70px;
 }
 
 .main_txt p{
@@ -221,13 +265,6 @@ a {
     margin: 0 5px;
     margin-bottom: 10px;
 }
-
-.image_vente {
-    height: 250px;
-    background: url(../images/SS21_NewArrivals_Site_MB.webp);
-}
-
-
 
 /* footer */
     footer { 
@@ -324,6 +361,7 @@ a {
     background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
     background-size: cover;
 }
+<<<<<<< HEAD
 .openCookie { 
     cursor: pointer;
 }
@@ -425,3 +463,6 @@ a {
         cursor: pointer;
         
     }
+=======
+
+>>>>>>> e85bcfbe0c14f0cc59f13651ba2111a6b98b308c
