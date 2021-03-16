@@ -421,5 +421,74 @@ img {
     .link_golf{
         text-align: center;
     }
+/* footer */
+    footer { 
+        background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
+        margin-top: 100px;
+        border-top: 5px solid #1d1d1d;
+        clear: both;
+        color: #1d1d1d;
+        min-height: 200px;
+        width: auto;   
+    }
+    .footer_link {
+        margin-top: 30px;
+    }
+    .footer_link a{ 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+        color: #5a5a5a;
+        font-family:Arial,sans-serif;
+    }
 
+    .footer_content { 
+       margin-top: 40px;
+        margin-left: 30px;
+        padding: 0px; 
+        font-size: 13px;
+        display: flex;
+    }
+    #boutonMail { 
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
 
+    }
+        
+    .footer_content input { 
+       font-size: 22px;
+    }
+
+    #logo_bas { 
+        height: 50px;
+        width: 50px;
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    }
+
+    .footer_txt_logo { 
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
+        text-align: center;
+
+    }
+
+    .footer_link2 a{ 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        color: black;
+        font-family:Arial,sans-serif;
+
+    }
