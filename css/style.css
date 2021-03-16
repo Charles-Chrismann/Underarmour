@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-
 }
 
 header{
@@ -99,6 +98,11 @@ a {
     }
 }
 
+.main_imagehead{
+    margin-top: 60px;
+}
+
+
 .main_container{
     margin-top: 50px;
     text-align: center;
@@ -107,11 +111,46 @@ a {
 .main_image{
     width: 100%;
     margin-top: 60px;
-    height: auto;
+    height: 250px;
+}
+
+.image_vente {
+    height: 400px;
+    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background-size: cover;
+}
+
+.image_nouveaute {
+    height: 400px;
+    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background-size: cover;
+}
+
+.image_soutien-gorge{
+    height: 400px;
+    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
+    background-size: cover;
 }
 
 .main_txt{
     text-align: center;
+    margin-top: 40px;
+}
+
+.main_txt-head{
+    text-align: center;
+}
+
+.main_txt-head h3{
+    font-size: 28px;
+    margin: 0 0 0 0;
+}
+
+.main_txt-head h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #1d1d1d;
+
 }
 
 .main_link {
@@ -125,6 +164,7 @@ a {
     border: 2px solid #1d1d1d;   
     border-radius: 5px; 
     align-items: center;
+    margin: 3px;
     padding: 7px 10px;
     cursor: pointer; 
 }
@@ -134,7 +174,7 @@ a {
     flex: 1 0 50%;
     text-align: center;  
     cursor: pointer;
-    height: auto;
+    /*height: auto;*/
 }
 
 .main_soutienGorge_legging .button:hover{
@@ -142,10 +182,6 @@ a {
     opacity: 1;
     color: black;
     font-weight: bold;
-}
-
-.image_soutien-gorge{
-    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
 }
 
 .main_soutienGorge_legging .soutien-gorge,
@@ -181,29 +217,33 @@ a {
 }
 
 .main_rubrique { 
-    margin-top: 60px;
+    margin-top: 120x;
     text-align: center;
 }
 
 .main_rubrique h2 {
-    font-size: 26px;
-    margin: 0 0 20px 0;
+    font-size: 30px;
+    margin: 0 0 10px 0;
 }
 
 .main_rubrique h3 {
+    margin-top: 100px;
     font-weight: 400;
     color: #1d1d1d;
+    margin: 0 0 5 0;
 }
 
 .main_txt h3{
     margin-top: 0;
     font-weight: 900;
-    font-size: 27px;
+    font-size: 14px;
 }
 
 .main_txt h4{
     font-weight: normal;
-    font-size: 13px;
+    font-size: 14px;
+    color: #1d1d1d;
+    margin: 0 70px 5px 70px;
 }
 
 .main_txt p{
@@ -219,17 +259,11 @@ a {
     margin-bottom: 10px;
 }
 
-.image_vente {
-    height: 250px;
-    background: url(../images/SS21_NewArrivals_Site_MB.webp);
-}
-
-
-
 /* footer */
     footer { 
         background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
         margin-top: 100px;
+        padding-bottom: 30px;
         border-top: 5px solid #1d1d1d;
         clear: both;
         color: #1d1d1d;
@@ -245,32 +279,46 @@ a {
         text-align: center;
         padding: 12px;
         font-size: 16px;
+        font-weight: 300;
         color: #5a5a5a;
         font-family:Arial,sans-serif;
     }
 
     .footer_content { 
        margin-top: 40px;
-        margin-left: 30px;
+        margin-left: 20px;
         padding: 0px; 
         font-size: 13px;
-        display: flex;
     }
     #boutonMail { 
-        height: 50px;
-        width: 50px;
-        border-radius: 8px;
-
+        height: 44px;
+        width: 100px;
+        border-radius: 5px;
+        margin-right: 10px;
+        
     }
         
     .footer_content input { 
-       font-size: 22px;
+       font-size: 13px;
+       flex: 1 0 60%;
+       margin-right: 10px;
+       
     }
 
+    .footer_input { 
+        display: flex;
+        justify-content: center;
+    }
+    ::placeholder{
+        color: black !important;
+       font-weight: 400;
+    }
+    
     #logo_bas { 
-        height: 50px;
-        width: 50px;
-        display: block;
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
@@ -295,6 +343,7 @@ a {
         font-size: 14px;
         color: black;
         font-family:Arial,sans-serif;
+        font-weight: 300;
 
     }
 
