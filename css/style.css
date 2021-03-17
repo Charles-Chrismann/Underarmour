@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 header{
@@ -34,8 +35,9 @@ a {
 }
 
 .main {
-    max-width: 1600px;
+  /* max-width: 1600px; */
     margin: 0 auto;
+    position: relative;
 }
 
 .global-header {
@@ -283,7 +285,9 @@ a {
         color: #5a5a5a;
         font-family:Arial,sans-serif;
     }
-
+    .footer_link a:hover{
+        color: red;
+    }
     .footer_content { 
        margin-top: 40px;
         margin-left: 20px;
@@ -295,14 +299,12 @@ a {
         width: 100px;
         border-radius: 5px;
         margin-right: 10px;
-        
-    }
+         }
         
     .footer_content input { 
        font-size: 13px;
        flex: 1 0 60%;
-       margin-right: 10px;
-       
+       margin-right: 10px;  
     }
 
     .footer_input { 
@@ -313,7 +315,7 @@ a {
         color: black !important;
        font-weight: 400;
     }
-    
+
     #logo_bas { 
     height: 50px;
     width: 50px;
@@ -344,7 +346,9 @@ a {
         color: black;
         font-family:Arial,sans-serif;
         font-weight: 300;
-
+    }
+    .footer_link2 a:hover{
+        color:red
     }
 
 .image_nouveaute {
@@ -352,4 +356,104 @@ a {
     background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
     background-size: cover;
 }
+.openCookie { 
+    cursor: pointer;
+}
 
+/* Cookie Page */ 
+.hide{
+    display: none;
+}
+
+.show{
+    display:block;
+}
+.footer_cookie { 
+    position: fixed;
+ top: 50%; left: 50%; 
+ transform: translate(-50% -50%);
+    border:solid black 1px;
+    background-color: white;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+        
+}
+    
+    .footer_cookie h1 { font-weight: normal;
+    font-size: 14px;
+    font-weight:600;
+    }
+    .footer_cookie p { 
+        color: grey;
+        }
+    
+
+.footer_logoCookie { 
+    text-align: center;
+    border-bottom: solid grey 1px;
+   }
+   .footer_cookie_element1,
+   .footer_cookie_element2,
+   .footer_cookie_element3  { 
+    border: solid grey 1px;
+    padding: 10px;
+    margin: 10px;
+    width: 480px;
+    background:#fcfcfc;
+    font-size: 14px;
+
+   }
+   
+   .footer_btnAnnuler{ 
+    text-align:center;
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+    margin-top: 20px;
+    margin-bottom:12px;
+    }
+
+     .footer_btnPreference{ 
+    text-align:center;
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+    color: white;
+    background-color: black;
+    }
+   
+    .footer_btnCookie{
+      display: flex; 
+      
+        }
+    
+        .btn_Refuser{ 
+        border: solid grey 1px;
+        padding: 4px;
+        margin-left: 170px;
+            }
+
+    .btn_Accepter{
+        border: solid grey 1px;
+        padding: 4px;
+    }
+
+    .footer_CookieBase p{
+        color: blue;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+    
+    .popclose {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin-left: 97%;
+        margin-top: -6%;
+        cursor: pointer;
+        
+    }
