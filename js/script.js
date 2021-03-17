@@ -429,7 +429,10 @@ function Menu() {
                     hamburger.classList.add('is-active');
                     self.navigationMobile.classList.add('mobile-nav-open');
                     self.build(self.menus);
-                } 
+            }else{
+                 hamburger.classList.remove('is-active');
+                 self.navigationMobile.classList.remove('mobile-nav-open');
+            } 
         }
     })
     debounce()
