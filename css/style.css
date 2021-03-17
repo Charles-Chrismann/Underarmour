@@ -1,6 +1,7 @@
-.main {
-    max-width: 1600px;
-    margin: 0 auto;
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 header{
@@ -12,12 +13,29 @@ header{
     transition: transform 250ms ease-out;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 a {
     font-weight: 600;
     font-size: 12px;
     margin: 0 10px;
     text-decoration: none;
     color: black;
+}
+
+.main {
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .global-header {
@@ -68,18 +86,6 @@ a {
     width: 60px;
 }
 
-img{
-    width: 100%;
-    height: auto;
-}
-
-h1 {
-    color: #000;
-    font-size: 48px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .navigation-mobile__text, .primary-logo__text {
     left: -999em;
     position: absolute;
@@ -92,78 +98,75 @@ h1 {
     }
 }
 
-
-body {
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
-
-}
-
-.imagehead {
-    width: 100%;
+.main_imagehead{
     margin-top: 60px;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    
-}
 
-.txt_imagehead {
+.main_container{
+    margin-top: 50px;
     text-align: center;
-
 }
 
-.txt_imagehead h3 {
-    font-size: 26px;
-    margin: 0 0 20px 0;
-
+.main_image{
+    width: 100%;
+    margin-top: 60px;
+    height: 250px;
 }
 
-.txt_imagehead h4 {
+.image_vente {
+    height: 400px;
+    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background-size: cover;
+}
+
+.image_nouveaute {
+    height: 400px;
+    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background-size: cover;
+}
+
+.image_soutien-gorge{
+    height: 400px;
+    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
+    background-size: cover;
+}
+
+.main_txt{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main_txt-head{
+    text-align: center;
+}
+
+.main_txt-head h3{
+    font-size: 28px;
+    margin: 0 0 0 0;
+}
+
+.main_txt-head h4{
+    font-size: 20px;
     font-weight: 400;
     color: #1d1d1d;
 
 }
 
-.link_imagehead {
+.main_link {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.link_imagehead a{
-    
-    margin-bottom: 10px;
-
-}
-
-
-
 .button{
     border: 2px solid #1d1d1d;   
     border-radius: 5px; 
     align-items: center;
+    margin: 3px;
     padding: 7px 10px;
-    cursor: pointer;
-    
-}
-
-
-/* Section Soutien-Gorge et legging */
-
-.main_soutienGorge_legging{
-    display: flex;
-    flex-direction: column;
-    padding: 7px 10px;  
-}
-
-
-.main_soutienGorge_legging{
-    margin-top: 50px;
+    cursor: pointer; 
 }
 
 .main_soutienGorge_legging div{
@@ -171,7 +174,7 @@ img {
     flex: 1 0 50%;
     text-align: center;  
     cursor: pointer;
-    height: auto;
+    /*height: auto;*/
 }
 
 .main_soutienGorge_legging .button:hover{
@@ -181,24 +184,8 @@ img {
     font-weight: bold;
 }
 
-.main_soutienGorge_legging .button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: all .5s ease;
-    border-radius: 4px;
-    background: transparent;
-    border-color: white;
-    color: white;
-    font-weight: bold;
-    z-index: 10;
-}
-
 .main_soutienGorge_legging .soutien-gorge,
-.main_soutienGorge_legging .legging
-{
+.main_soutienGorge_legging .legging{
     position: relative;
 }
 
@@ -207,15 +194,13 @@ img {
    z-index: 0;
 }
 
-
 .main_soutienGorge_legging .soutien-gorge:hover:after,
 .main_soutienGorge_legging .legging:hover:after {
     opacity:.7;
 }
 
 .main_soutienGorge_legging .soutien-gorge:hover .button,
-.main_soutienGorge_legging .legging:hover .button
-{
+.main_soutienGorge_legging .legging:hover .button{
     opacity: 1;
 }
 
@@ -231,38 +216,38 @@ img {
     -webkit-transition: all 0.5s;
 }
 
-
-.main_soutienGorge_legging h4{
-    font-weight: 300;   
-}
-
-
-
-/* Partie Vente */
-
-.main_vente { 
-    margin-top: 60px;
+.main_rubrique { 
+    margin-top: 120x;
     text-align: center;
 }
 
-.main_vente h3 {
+.main_rubrique h2 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+
+.main_rubrique h3 {
+    margin-top: 100px;
     font-weight: 400;
     color: #1d1d1d;
-}
-.main_vente h2 {
-    font-size: 26px;
-    margin: 0 0 20px 0;
-
+    margin: 0 0 5 0;
 }
 
-.link_vente {
+.main_txt h3{
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 14px;
+}
 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.main_txt h4{
+    font-weight: normal;
+    font-size: 14px;
+    color: #1d1d1d;
+    margin: 0 70px 5px 70px;
+}
 
-
+.main_txt p{
+    font-size: 8px;
 }
 
 .link_vente a{
@@ -274,152 +259,97 @@ img {
     margin-bottom: 10px;
 }
 
-.image_vente {
-    margin-top: 50px;
-    width: 100%;
-    height: 250px;
-    background: url(../images/SS21_NewArrivals_Site_MB.webp);
-    background-size: cover;
-}
-
-/* nouveauté */
-
-.main_nouveauté { 
-    margin-top: 60px;
-    text-align: center;
-}
-
-
-.main_nouveauté h3 {
-    font-weight: bold;
-    color: #1d1d1d;
-}
-.main_nouveauté p {
+/* footer */
+    footer { 
+        background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
+        margin-top: 100px;
+        padding-bottom: 30px;
+        border-top: 5px solid #1d1d1d;
+        clear: both;
+        color: #1d1d1d;
+        min-height: 200px;
+        width: auto;   
+    }
+    .footer_link {
+        margin-top: 30px;
+    }
+    .footer_link a{ 
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #5a5a5a;
+        font-family:Arial,sans-serif;
     }
 
-    .link_nouveauté {
-        text-align: center;
+    .footer_content { 
+       margin-top: 40px;
+        margin-left: 20px;
+        padding: 0px; 
+        font-size: 13px;
+    }
+    #boutonMail { 
+        height: 44px;
+        width: 100px;
+        border-radius: 5px;
+        margin-right: 10px;
+        
+    }
+        
+    .footer_content input { 
+       font-size: 13px;
+       flex: 1 0 60%;
+       margin-right: 10px;
+       
+    }
+
+    .footer_input { 
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+    }
+    ::placeholder{
+        color: black !important;
+       font-weight: 400;
     }
     
-    .link_nouveauté a{
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
+    #logo_bas { 
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    }
+
+    .footer_txt_logo { 
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer_copyright {
         font-size: 12px;
-        margin: 0 5px;
-        margin-bottom: 10px;
-    }
-
-    .image_nouveauté {
-        margin-top: 50px;
-        width: 100%;
-        height: 250px;
-        background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
-        background-size: cover;
-    }
-
-    /* vestes ua */
-
-    .main_acheter { 
-        margin-top: 60px;
         text-align: center;
-    }
-    
-    .main_acheter h3 {
-        font-weight: bold;
-        color: #1d1d1d;
+
     }
 
-    
-        .link_acheter a{
-            text-decoration: none;
-            color: black;
-            font-weight: 600;
-            font-size: 12px;
-            margin: 0 5px;
-            margin-bottom: 10px;
-        }
-
-
-
-    /* performant */
-
-
-    .main_performant{
+    .footer_link2 a{ 
+        display: flex;
+        flex-direction: column;
         text-align: center;
-    }
-
-    .txt_mainperformant h2{
-        font-weight:normal;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 0px;
-
-    }
-
-    .txt_mainperformant h3{
-        text-align: center;
-        font-size: 30px;
-        margin: 5px 5px;
-    }
-
-    .link_mainperformant a{
-        text-decoration: none;
+        padding: 12px;
+        font-size: 14px;
         color: black;
-        font-weight: 600;
-        font-size: 12px;
-        margin: 0 3px;
-        margin-bottom: 10px;
-    }
-
-
-    /* tribase */
-
-    .main_tribase {
-        margin-top: 40px;
-    }
-
-    .txt_tribase{
-        text-align: center;
-    }
-
-    .link_tribase{
-        text-align: center;
+        font-family:Arial,sans-serif;
+        font-weight: 300;
 
     }
 
-
-    /* rock */
-
-
-    .main_rock{
-        margin-top: 50px;
-    }
-
-    .txt_rock{
-        text-align: center;
-    }
-
-    .link_rock{
-        text-align: center;
-    }
-
-    /* golf */
-
-    .main_golf{
-        margin-top: 50px;
-    }
-
-    .txt_golf{
-        text-align: center;
-    }
-
-    .link_golf{
-        text-align: center;
-    }
-
+.image_nouveaute {
+    height: 250px;
+    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background-size: cover;
+}
 
