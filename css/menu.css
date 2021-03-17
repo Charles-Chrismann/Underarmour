@@ -124,7 +124,11 @@ header{
 }
 
 .header_nav .nav_link{
- 
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .header_nav  .nav_link--active{
@@ -201,7 +205,7 @@ header{
    }
 }
 
-@media screen and (min-width:767px){
+@media screen and (min-width:769px){
     .header_nav{
         display: block;
         width: 100%;
@@ -232,9 +236,7 @@ header{
         justify-content: space-around;
     }
 
-    .main_title .main_link a{
-
-    }
+   
 
     .main_txt-head{
      
@@ -260,7 +262,7 @@ header{
     }
 
 
-    .button{
+    .main_title .button{
         background-color: #1d1d1d;
         color: #fff;
         border-color: #1d1d1d;
@@ -270,9 +272,19 @@ header{
  
  @media screen and (min-width:992px){
 
-    .button{
+    .main_title .button{
         padding: 11.5px 20px !important;;
         font-size: 13px !important;
+    }
+
+    
+}
+
+@media screen and (min-width:1450px){
+    .main_title .main_link a{
+        flex: 1;
+        word-break: break-all;
+        font-size: 12px !important;
     }
     
 }

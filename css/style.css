@@ -18,7 +18,7 @@ h1 {
     text-transform: uppercase;
 }
 
-a {
+section a {
     font-weight: 600;
     font-size: 12px;
     margin: 0 10px;
@@ -27,7 +27,7 @@ a {
 }
 
 .main {
-  /* max-width: 1600px; */
+    max-width: 1600px; 
     margin: 0 auto;
     position: relative;
 }
