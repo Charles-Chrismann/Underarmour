@@ -2,12 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-<<<<<<< HEAD
-    
     height: 100vh;
-
-=======
->>>>>>> e85bcfbe0c14f0cc59f13651ba2111a6b98b308c
 }
 
 header{
@@ -361,7 +356,6 @@ a {
     background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
     background-size: cover;
 }
-<<<<<<< HEAD
 .openCookie { 
     cursor: pointer;
 }
@@ -463,6 +457,3 @@ a {
         cursor: pointer;
         
     }
-=======
-
->>>>>>> e85bcfbe0c14f0cc59f13651ba2111a6b98b308c
