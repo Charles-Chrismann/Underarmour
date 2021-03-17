@@ -41,6 +41,38 @@ console.log(element)
 //     document.querySelector(listeCat[i]).addEventListener('click',afficherSousCat)
 // }
 
+
+
+
+
+
+function accordeon(elem){
+    var list = document.querySelectorAll(elem);
+    var i=0;
+    let icon;
+    while (i < list.length) {
+      list[i].addEventListener("click", function () {
+        var panel = this.nextElementSibling;
+        icon = this.querySelector('i');
+        if (/show/.test(panel.className)) {
+          removeClass(panel, 'show', 'hide');
+          removeClass(icon, 'minus', 'plus');
+        } else {
+          let isActive = document.querySelector('.accordeon .show');
+          if(isActive){
+            removeClass(isActive, 'show', 'hide');
+          }
+          removeClass(icon, 'plus', 'minus');
+          this.nextElementSibling.classList.add('show');
+        }
+      });
+      i++;
+    }
+}
+
+
+  
+
 function Menu() {
     let self = this;
     this.menus = [
@@ -383,24 +415,40 @@ function Menu() {
     let header = document.querySelector('header');
     this.navigationMobile = this.createElementWithClass("navigation-mobile", 'div');
     let primaryNav = this.createElementWithClass("primary-nav", 'nav');
-    let container = this.createElementWithClass("mobile-nav-container", 'div');
+    this.container = this.createElementWithClass("mobile-nav-container", 'div');
     let principalList = this.createUl('Mon compte', 'is-active', false, this.menus);
-    container.appendChild(principalList);
-    primaryNav.appendChild(container);
+    this.container.appendChild(principalList);
+    primaryNav.appendChild(this.container);
     this.navigationMobile.appendChild(primaryNav);
     header.appendChild(this.navigationMobile);
-    hamburger.addEventListener('click', (e) => {
-        let hamburgerIsActive = document.querySelector('.hamburger.is-active');
-
-        if (!hamburgerIsActive) {
-            hamburger.classList.add('is-active');
-            self.navigationMobile.classList.add('mobile-nav-open');
-            self.build(self.menus);
-        } else {
-            hamburger.classList.remove('is-active');
-            self.navigationMobile.classList.remove('mobile-nav-open');
+ 
+      hamburger.addEventListener('click', (e) => {
+        if(window.innerWidth < 768){
+                let hamburgerIsActive = document.querySelector('.hamburger.is-active');
+              if (!hamburgerIsActive) {
+                    hamburger.classList.add('is-active');
+                    self.navigationMobile.classList.add('mobile-nav-open');
+                    self.build(self.menus);
+                } 
         }
-    });
+    })
+    debounce()
+        function debounce() {
+            if(window.matchMedia( '(min-width: 768px)' ).matches){
+                hamburger.classList.remove('is-active');
+                removeClass(hamburger.parentElement, 'burger--show', 'hide');
+                self.navigationMobile.classList.remove('mobile-nav-open');
+                let container = document.querySelector('.mobile-nav-container');
+                let tmp = container.firstChild;
+                tmp.className = "is-active"
+                container.innerHTML = tmp.outerHTML;
+            }else{
+                removeClass(hamburger.parentElement, 'hide', 'burger--show')
+            }
+    }
+     
+     
+     window.addEventListener( 'resize', debounce );
 
 }
 
@@ -411,31 +459,29 @@ Menu.prototype.build = function (menus) {
     [...childrens].forEach(item => {
         item.addEventListener('click', function (e) {
             let cat_id = e.target.closest('li').getAttribute('id');
-              if (cat_id) {
+            if (cat_id) {
                 let menu = menus.find(menu => menu.id == cat_id);
-                  let ifNextIdUl = item.closest('ul').getAttribute('id');
-                  
-                  let menu_title = '< Menu Principal';
-                  if(ifNextIdUl){
-                      let menu = self.menus.find(menu => menu.id == ifNextIdUl);
-                      menu_title = '< ' + menu.name;
-                  }
-                  let lists = self.createUl( menu_title, 'list-item', e.target, menu.childrens);
-                  insertAfter(listIsActive, lists);
-                  setTimeout(() => {
-                      item.closest('ul').className = 'is-prev';
-                      item.closest('ul').nextElementSibling.className = "is-active";
-                      self.build(menu.childrens);
-                  }, 100);
-  
-                  lists.querySelector('.mobile-nav-user').addEventListener('click', function (e) {
-                      e.target.closest('ul').previousElementSibling.classList.remove('is-prev')
-                      e.target.closest('ul').previousElementSibling.classList.add('is-active')
-                      e.target.closest('ul').remove('is-active')
-                  });
-                  
-              }
-              
+                let ifNextIdUl = item.closest('ul').getAttribute('id');
+                
+                let menu_title = '< Menu Principal';
+                if(ifNextIdUl){
+                    let menu = self.menus.find(menu => menu.id == ifNextIdUl);
+                    menu_title = '< ' + menu.name;
+                }
+                let lists = self.createUl( menu_title, 'list-item', e.target, menu.childrens);
+                insertAfter(listIsActive, lists);
+                setTimeout(() => {
+                    item.closest('ul').className = 'is-prev';
+                    item.closest('ul').nextElementSibling.className = "is-active";
+                    self.build(menu.childrens);
+                }, 100);
+
+                lists.querySelector('.mobile-nav-user').addEventListener('click', function (e) {
+                    e.target.closest('ul').previousElementSibling.classList.remove('is-prev')
+                    e.target.closest('ul').previousElementSibling.classList.add('is-active')
+                    e.target.closest('ul').remove('is-active')
+                });    
+            } 
         });
     });
 }
@@ -450,7 +496,6 @@ Menu.prototype.createElementWithClass = function (className, type) {
 Menu.prototype.navigationHead = function (title) {
     let div = this.createElementWithClass('mobile-nav-user', 'div');
     let li = document.createElement('li');
-    let a = document.createElement('a');
     div.textContent = title;
     li.appendChild(div);
     return li;
@@ -490,6 +535,14 @@ function insertAfter(element, newElement) {
     element.parentNode.insertBefore(newElement, element.nextSibling);
 }
 
-new Menu();
 
+function removeClass(elem, prevClass, nextClass){
+    var regexstring = prevClass;
+    var regexp = new RegExp(regexstring, "gi");
+    elem.className = elem.className.replace(regexp , nextClass);
+}
+
+
+new Menu();
+accordeon(".accordeon h2");
 

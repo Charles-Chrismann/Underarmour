@@ -5,14 +5,6 @@ body {
     height: 100vh;
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 95;
-    transition: transform 250ms ease-out;
-}
 
 img{
     width: 100%;
@@ -40,68 +32,9 @@ a {
     position: relative;
 }
 
-.global-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    border-bottom: 1px solid #dfdfdf;
-    height: 60px;
-    padding: 0 20px;
-    overflow: visible;
-    z-index: 95;
-}
-
-.header-icons-left{
-    display: flex;
-    height: 60px;
-    align-items: center;
-    width: 80px;
-}
-
-.header-icons-right{
-    display: flex;
-    height: 60px;
-    align-items: center;
-    width: 100px;
-}
-
-.header-icons-left i{
-    font-size: 1.5em;
-    font-weight: 300px;
-    margin-left: auto;
-}
-
-.header-icons-right i{
-    font-size: 1.8em;
-    font-weight: 300px;
-    margin-left: auto;
-}
-
-.header-icons-left svg{
-    height: 25px;
-    width: 31px;
-}
-
-.primary-logo{
-    height: 60px;
-    width: 60px;
-}
-
-.navigation-mobile__text, .primary-logo__text {
-    left: -999em;
-    position: absolute;
-}
-
-@media screen and (max-width: 767px){
-    h1 {
-        font-size: 24px;
-        margin: 20px 0;
-    }
-}
-
 .main_imagehead{
     margin-top: 60px;
+    position: relative;
 }
 
 
@@ -141,6 +74,10 @@ a {
 
 .main_txt-head{
     text-align: center;
+}
+
+.main_link{
+    margin-top: 100px;
 }
 
 .main_txt-head h3{
