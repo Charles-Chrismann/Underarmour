@@ -6,7 +6,6 @@ body {
     min-width: 220px;
 }
 
-
 img{
     width: 100%;
     height: auto;
@@ -29,6 +28,7 @@ section a {
     margin: 0 10px;
     color: black;
 }
+
 
 /* en-tête */
 
@@ -78,6 +78,13 @@ section a {
     height: auto;
 }
 
+.main_container{
+    margin-top: 50px;
+}
+
+/* media queries */
+
+
 @media screen and (min-width: 768px) {
     .entete_txt p{
         text-align: left;
@@ -87,6 +94,106 @@ section a {
         .entete_txt{
             margin-left: 2px;
         }
+
+        .double_container .main_container{
+            margin-top: 50px;
+            text-align: center;
+            flex: 0 0 49.5%;
+        }
+        
+        .double_container{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+           
+        }
+
+        .main_end{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main_end, .main_container{
+            flex: 0 0 33%;
+        }
+
+        .double_container .button, 
+        .main_end .button {
+            /* display: none; */
+            opacity: 0;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .main_container , .main_end{
+            position: relative;
+
+        }
+
+        .img{
+            overflow: hidden;
+            position: relative;
+        }
+
+        .main_container .main_link{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+             transform: translate(-50%, -50%);
+
+        }
+
+        .main_end .main_container .main_link{
+            top: 30%;
+        }
+    
+        .main_container:hover .button{
+        opacity: 0;
+        color: white !important;
+        font-weight: bold;
+        } 
+
+        .main_container:hover .img:after{
+        content:' ';
+        position:absolute;
+        width:100%; height:100%;
+        top:0; left:0;
+        background:rgba(0,0,0,0.6);
+        opacity: 0.5;
+       
+        cursor: pointer;
+        } 
+
+        .main_container .img{
+            -webkit-transition: all 0.5s;
+        }
+
+        .main_container:hover .img{
+            opacity:0.7;
+        }
+
+        .main_soutienGorge_legging .main_container:hover .button,
+        .double_container .main_container:hover .button,
+        .main_end .main_container:hover .button{
+            opacity: 1;
+            z-index: 500 !important;
+            border: 2px solid white;
+            font-weight:600;
+            
+        }  
+
+        .main_container .button:hover{
+            background: white;
+            color: black !important;
+        
+
+        }
+
+        /* .main_container .img{
+        background-color: black;
+        z-index: 0;
+        } */
+
 
 }
 
@@ -157,10 +264,7 @@ section a {
 }
 
 
-.main_container{
-    margin-top: 50px;
-    text-align: center;
-}
+
 
 .main_image{
     width: 100%;
@@ -186,6 +290,13 @@ section a {
     background-size: cover;
 }
 
+.image_legging{
+    height: 400px;
+    background: url(../images/SS21_Q1_Non-Slip-Waistband_EMEA_Site_MB.webp);
+    background-size: cover;
+
+}
+
 .main_txt{
     text-align: center;
     margin-top: 40px;
@@ -193,10 +304,6 @@ section a {
 
 .main_txt-head{
     text-align: center;
-}
-
-.main_link{
-    margin-top: 100px;
 }
 
 .main_txt-head h3{
@@ -210,6 +317,10 @@ section a {
     color: #1d1d1d;
 
 }
+
+
+
+
 
 .main_link {
     text-align: center;
@@ -227,52 +338,6 @@ section a {
     cursor: pointer; 
 }
 
-.main_soutienGorge_legging div{
-    position: relative;
-    flex: 1 0 50%;
-    text-align: center;  
-    cursor: pointer;
-    /*height: auto;*/
-}
-
-.main_soutienGorge_legging .button:hover{
-    background-color: white;
-    opacity: 1;
-    color: black;
-    font-weight: bold;
-}
-
-.main_soutienGorge_legging .soutien-gorge,
-.main_soutienGorge_legging .legging{
-    position: relative;
-}
-
-.main_soutienGorge_legging img{
-   background-color: black;
-   z-index: 0;
-}
-
-.main_soutienGorge_legging .soutien-gorge:hover:after,
-.main_soutienGorge_legging .legging:hover:after {
-    opacity:.7;
-}
-
-.main_soutienGorge_legging .soutien-gorge:hover .button,
-.main_soutienGorge_legging .legging:hover .button{
-    opacity: 1;
-}
-
-.main_soutienGorge_legging .soutien-gorge:after,
-.main_soutienGorge_legging .legging:after {
-    content:' ';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.6);
-    opacity: 0;
-    transition: all 0.3s;
-    -webkit-transition: all 0.5s;
-}
 
 .main_rubrique { 
     margin-top: 120x;
@@ -408,7 +473,7 @@ section a {
     }
 
 .image_nouveaute {
-    height: 250px;
+    height: 400px;
     background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
     background-size: cover;
 }
