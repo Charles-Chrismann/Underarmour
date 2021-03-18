@@ -1,0 +1,537 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    transition: transform 250ms ease-out;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #000;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* en-tête */
+
+.entete{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    background-color: black;  
+}
+
+.onglet p, .onglet a{
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: right;
+    font-weight: 400;
+}
+
+.english, .langue, .point_vente, .compte {
+    margin: 0px 5px 5px 5px;
+}
+
+.onglet{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+
+}
+
+.entete_txt p{
+    padding-top: 5px;
+    color: white;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+.onglet img {
+    width: 20px;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .entete_txt p{
+        text-align: left;
+        margin-left: 20px ;
+        }
+}
+
+/* LANGUES */
+
+.langue{
+    position: relative;
+}
+
+#choix_langue{
+    background: white;
+    padding: 5px;
+}
+
+.langue_list p a{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.langue_list p a:hover{
+    color: red;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+
+/* corps du texte*/
+.main {
+  /* max-width: 1600px; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.global-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    height: 60px;
+    padding: 0 20px;
+    overflow: visible;
+    z-index: 95;
+}
+
+.header-icons-left{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 80px;
+}
+
+.header-icons-right{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 100px;
+}
+
+.header-icons-left i{
+    font-size: 1.5em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-right i{
+    font-size: 1.8em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-left svg{
+    height: 25px;
+    width: 31px;
+}
+
+.primary-logo{
+    height: 60px;
+    width: 60px;
+}
+
+.navigation-mobile__text, .primary-logo__text {
+    left: -999em;
+    position: absolute;
+}
+
+@media screen and (max-width: 767px){
+    h1 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+}
+
+.main_imagehead{
+    margin-top: 60px;
+}
+
+
+.main_container{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main_image{
+    width: 100%;
+    margin-top: 60px;
+    height: 250px;
+}
+
+.image_vente {
+    height: 400px;
+    background: url(/SS21_NewArrivals_Site_MB.75f2898a.webp);
+    background-size: cover;
+}
+
+.image_nouveaute {
+    height: 400px;
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
+    background-size: cover;
+}
+
+.image_soutien-gorge{
+    height: 400px;
+    background: url(/SS21_Q1_CrossbackBra_EMEA_Site_MB.44c26217.webp);
+    background-size: cover;
+}
+
+.main_txt{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main_txt-head{
+    text-align: center;
+}
+
+.main_txt-head h3{
+    font-size: 28px;
+    margin: 0 0 0 0;
+}
+
+.main_txt-head h4{
+    font-size: 20px;
+    font-weight: 400;
+    color: #1d1d1d;
+
+}
+
+.main_link {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button{
+    border: 2px solid #1d1d1d;   
+    border-radius: 5px; 
+    align-items: center;
+    margin: 3px;
+    padding: 7px 10px;
+    cursor: pointer; 
+}
+
+.main_soutienGorge_legging div{
+    position: relative;
+    flex: 1 0 50%;
+    text-align: center;  
+    cursor: pointer;
+    /*height: auto;*/
+}
+
+.main_soutienGorge_legging .button:hover{
+    background-color: white;
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+}
+
+.main_soutienGorge_legging .soutien-gorge,
+.main_soutienGorge_legging .legging{
+    position: relative;
+}
+
+.main_soutienGorge_legging img{
+   background-color: black;
+   z-index: 0;
+}
+
+.main_soutienGorge_legging .soutien-gorge:hover:after,
+.main_soutienGorge_legging .legging:hover:after {
+    opacity:.7;
+}
+
+.main_soutienGorge_legging .soutien-gorge:hover .button,
+.main_soutienGorge_legging .legging:hover .button{
+    opacity: 1;
+}
+
+.main_soutienGorge_legging .soutien-gorge:after,
+.main_soutienGorge_legging .legging:after {
+    content:' ';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+}
+
+.main_rubrique { 
+    margin-top: 120x;
+    text-align: center;
+}
+
+.main_rubrique h2 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+
+.main_rubrique h3 {
+    margin-top: 100px;
+    font-weight: 400;
+    color: #1d1d1d;
+    margin: 0 0 5 0;
+}
+
+.main_txt h3{
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.main_txt h4{
+    font-weight: normal;
+    font-size: 14px;
+    color: #1d1d1d;
+    margin: 0 70px 5px 70px;
+}
+
+.main_txt p{
+    font-size: 8px;
+}
+
+.link_vente a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+/* footer */
+    footer { 
+        background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
+        margin-top: 100px;
+        padding-bottom: 30px;
+        border-top: 5px solid #1d1d1d;
+        clear: both;
+        color: #1d1d1d;
+        min-height: 200px;
+        width: auto;   
+    }
+    .footer_link {
+        margin-top: 30px;
+    }
+    .footer_link a{ 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #5a5a5a;
+        font-family:Arial,sans-serif;
+    }
+    .footer_link a:hover{
+        color: red;
+    }
+    .footer_content { 
+       margin-top: 40px;
+        margin-left: 20px;
+        padding: 0px; 
+        font-size: 13px;
+    }
+    #boutonMail { 
+        height: 44px;
+        width: 100px;
+        border-radius: 5px;
+        margin-right: 10px;
+         }
+        
+    .footer_content input { 
+       font-size: 13px;
+       flex: 1 0 60%;
+       margin-right: 10px;  
+    }
+
+    .footer_input { 
+        display: flex;
+        justify-content: center;
+    }
+    ::placeholder{
+        color: black !important;
+       font-weight: 400;
+    }
+
+    #logo_bas { 
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    }
+
+    .footer_txt_logo { 
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
+        text-align: center;
+
+    }
+
+    .footer_link2 a{ 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        color: black;
+        font-family:Arial,sans-serif;
+        font-weight: 300;
+    }
+    .footer_link2 a:hover{
+        color:red
+    }
+
+.image_nouveaute {
+    height: 250px;
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
+    background-size: cover;
+}
+.openCookie { 
+    cursor: pointer;
+}
+
+/* Cookie Page */ 
+.hide{
+    display: none;
+}
+
+.show{
+    display:block;
+}
+.footer_cookie { 
+    position: fixed;
+ top: 50%; left: 50%; 
+ transform: translate(-50% -50%);
+    border:solid black 1px;
+    background-color: white;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+        
+}
+    
+    .footer_cookie h1 { font-weight: normal;
+    font-size: 14px;
+    font-weight:600;
+    }
+    .footer_cookie p { 
+        color: grey;
+        }
+    
+
+.footer_logoCookie { 
+    text-align: center;
+    border-bottom: solid grey 1px;
+   }
+   .footer_cookie_element1,
+   .footer_cookie_element2,
+   .footer_cookie_element3  { 
+    border: solid grey 1px;
+    padding: 10px;
+    margin: 10px;
+    width: 480px;
+    background:#fcfcfc;
+    font-size: 14px;
+
+   }
+   
+   .footer_btnAnnuler{ 
+    text-align:center;
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+    margin-top: 20px;
+    margin-bottom:12px;
+    }
+
+     .footer_btnPreference{ 
+    text-align:center;
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+    color: white;
+    background-color: black;
+    }
+   
+    .footer_btnCookie{
+      display: flex; 
+      
+        }
+    
+        .btn_Refuser{ 
+        border: solid grey 1px;
+        padding: 4px;
+        margin-left: 170px;
+            }
+
+    .btn_Accepter{
+        border: solid grey 1px;
+        padding: 4px;
+    }
+
+    .footer_CookieBase p{
+        color: blue;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 12px;
+    }
+    
+    .popclose {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin-left: 97%;
+        margin-top: -6%;
+        cursor: pointer;
+        
+    }
+
+
+/*# sourceMappingURL=/style.78032849.css.map */

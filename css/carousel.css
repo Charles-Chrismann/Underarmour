@@ -1,0 +1,81 @@
+#carousel{
+    padding: 0 60px;
+}
+
+.carousel{
+    position: relative;
+    height: 519px;
+}
+
+.carousel__item{
+    padding: 10px;
+    float: left;
+}
+
+.item{
+    margin: 40px 10px;
+    box-shadow: 0 15px 35px #ddd, 0 5px 15px rgb(255, 255, 255);
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+}
+
+.carrousel__container{
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+}
+
+
+/* .carousel__container:after{
+    content: '';
+    clear: both;
+    display: table;
+} */
+
+.carousel__container{
+    transition: transform .3s;
+}
+
+.recommendation_carousel{
+    position: relative;
+}
+
+.owl-carousel {
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+
+.owl-controls{
+    position: absolute;
+    height: 300px;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    top: 50%;
+}
+
+
+.owl-controls .owl-buttons .owl-prev.disabled {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2030'%3E%3Cpath%20fill='%23B4B4B4'%20d='M18.227%200L0%2015.043%2018.227%2030%2020%2027.405%204.798%2015.043%2020%202.68z'/%3E%3C/svg%3E");
+}
+
+.owl-controls .owl-buttons .owl-next {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2020%2030'%3E%3Cpath%20fill='%231D1D1D'%20d='M1.773%200L20%2015.043%201.773%2030%200%2027.405l15.202-12.362L0%202.68z'/%3E%3C/svg%3E");
+    right: 20px;
+    left: auto;
+}
+
+
+.owl-controls .owl-buttons div {
+    position: absolute;
+    top: 40%;
+    height: 30px;
+    width: 20px;
+    left: 20px;
+}
+
+
+.owl-controls .owl-buttons {
+    position: relative;
+}
+
