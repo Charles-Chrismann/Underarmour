@@ -65,13 +65,11 @@ a {
 }
 
 .entete_txt p{
+    padding-top: 5px;
     color: white;
     margin: 0 0 0 0;
-    font-size: 13px;
     text-align: center;
-    padding-top: 4px;
-    margin-left: 200px;
-
+    font-size: 13px;
 }
 
 .onglet img {
@@ -84,20 +82,6 @@ a {
         text-align: left;
         margin-left: 20px ;
         }
-
-}
-
-@media screen and (max-width: 768px) {
-    .onglet{ 
-        display: none;
- 
-}
-
-
-
-
-
-
 }
 
 /* LANGUES */
@@ -106,14 +90,9 @@ a {
     position: relative;
 }
 
-.langue_list li{
-    text-align: left;
-}
-
-.langue_list{
+#choix_langue{
     background: white;
     padding: 5px;
-    position: fixed;
 }
 
 .langue_list p a{
@@ -128,14 +107,6 @@ a {
     transition: 0.3s;
 }
 
-.trait{
-    width: 10px;
-    height: 2px;
-}
-
-.voir_tous p a{
-    font-weight:600;
-}
 
 /* corps du texte*/
 .main {
@@ -222,19 +193,19 @@ a {
 
 .image_vente {
     height: 400px;
-    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background: url(/SS21_NewArrivals_Site_MB.75f2898a.webp);
     background-size: cover;
 }
 
 .image_nouveaute {
     height: 400px;
-    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
     background-size: cover;
 }
 
 .image_soutien-gorge{
     height: 400px;
-    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
+    background: url(/SS21_Q1_CrossbackBra_EMEA_Site_MB.44c26217.webp);
     background-size: cover;
 }
 
@@ -457,7 +428,7 @@ a {
 
 .image_nouveaute {
     height: 250px;
-    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
     background-size: cover;
 }
 .openCookie { 
@@ -561,3 +532,6 @@ a {
         cursor: pointer;
         
     }
+
+
+/*# sourceMappingURL=/style.78032849.css.map */

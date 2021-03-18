@@ -493,3 +493,15 @@ function insertAfter(element, newElement) {
 new Menu();
 
 
+
+
+// en-tête //
+
+let fas = document.querySelector(".fas");
+let langue_list = document.querySelector(".langue_list");
+
+fas.addEventListener("click", event => {
+    langue_list.classList.toggle("hide"); 
+})
+
+
