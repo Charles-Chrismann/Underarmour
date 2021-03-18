@@ -1,0 +1,71 @@
+/*partie accordeon*/
+.accordeon {
+    height: auto;
+    margin-top: 50px;
+}
+
+.categorie_meilleurs_ventes,
+.categorie_tendances_hommes,
+.categorie_tendances_femmes,
+.categorie_tendances{
+    background-color: #e9e9e9;
+}
+
+.sous-categorie{
+    padding-left: 20px;
+    background-color: #e2e1dd;
+    border-top: 1px solid #ccc;
+    padding: 12px 10px;
+    display: flex;
+}
+
+.meilleurs_ventes_contenu,
+.tendances_hommes_contenu,
+.tendances_femmes_contenu,
+.tendances_contenu,
+.contenu{
+    display: none;
+    height: auto;
+}
+
+.accordeon_icon_horizontale{
+    height: 20px;
+    width: 5px;
+    background-color: grey;
+    position: absolute;
+    right: 20px;
+}
+
+.accordeon_icon_verticale{
+    height: 5px;
+    width: 20px;
+    background-color: grey;
+    position: absolute;
+    right: 12px;
+}
+
+.show{
+    display: block;
+}
+
+.accordeon h2{
+    background-color: #e2e1dd;
+    padding: 12px 10px;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    font-size: 16px;
+}
+
+.accordeon i{
+    position: absolute;
+    right: 20px;
+}
+
+.accordeon h2 i{
+    color: red;
+    font-weight: 900;
+}
+
+
+/*# sourceMappingURL=/accordeon.919e1985.css.map */

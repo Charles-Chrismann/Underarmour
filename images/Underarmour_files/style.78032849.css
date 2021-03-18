@@ -3,9 +3,16 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    min-width: 220px;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+    transition: transform 250ms ease-out;
+}
 
 img{
     width: 100%;
@@ -19,14 +26,11 @@ h1 {
     text-transform: uppercase;
 }
 
-a{
-    text-decoration: none;
-}
-
-section a {
+a {
     font-weight: 600;
     font-size: 12px;
     margin: 0 10px;
+    text-decoration: none;
     color: black;
 }
 
@@ -50,7 +54,7 @@ section a {
 }
 
 .english, .langue, .point_vente, .compte {
-    margin: 0px 15px 15px 5px;
+    margin: 0px 5px 5px 5px;
 }
 
 .onglet{
@@ -60,17 +64,12 @@ section a {
 
 }
 
-.entete_txt{
-    margin: auto;
-}
-
 .entete_txt p{
+    padding-top: 5px;
     color: white;
     margin: 0 0 0 0;
-    font-size: 13px;
     text-align: center;
-    padding-top: 4px;
-
+    font-size: 13px;
 }
 
 .onglet img {
@@ -83,17 +82,6 @@ section a {
         text-align: left;
         margin-left: 20px ;
         }
-
-        .entete_txt{
-            margin-left: 2px;
-        }
-
-}
-
-@media screen and (max-width: 768px) {
-    .onglet{ 
-        display: none;
-    }
 }
 
 /* LANGUES */
@@ -102,33 +90,15 @@ section a {
     position: relative;
 }
 
-.langue_list li{
-    text-align: left;
-}
-
-.langue_list{
+#choix_langue{
     background: white;
     padding: 5px;
-    position: fixed;
-    z-index: 100;
-    right: 150px;
-    margin-bottom: 10px;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    
-
-}
-
-.langue_list p a img {
-    margin-right: 8px;
 }
 
 .langue_list p a{
     color: black;
     font-size: 14px;
     font-weight: 400;
-    display: flex;
 }
 
 .langue_list p a:hover{
@@ -137,23 +107,76 @@ section a {
     transition: 0.3s;
 }
 
-.voir_tous p a{
-    font-weight:600;
-    text-align: center;
-    border-top: 1px solid #f0f0f0;
-    padding: 5px 5px 0;
-}
 
 /* corps du texte*/
 .main {
-    max-width: 1600px; 
+  /* max-width: 1600px; */
     margin: 0 auto;
     position: relative;
 }
 
+.global-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    height: 60px;
+    padding: 0 20px;
+    overflow: visible;
+    z-index: 95;
+}
+
+.header-icons-left{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 80px;
+}
+
+.header-icons-right{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    width: 100px;
+}
+
+.header-icons-left i{
+    font-size: 1.5em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-right i{
+    font-size: 1.8em;
+    font-weight: 300px;
+    margin-left: auto;
+}
+
+.header-icons-left svg{
+    height: 25px;
+    width: 31px;
+}
+
+.primary-logo{
+    height: 60px;
+    width: 60px;
+}
+
+.navigation-mobile__text, .primary-logo__text {
+    left: -999em;
+    position: absolute;
+}
+
+@media screen and (max-width: 767px){
+    h1 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+}
+
 .main_imagehead{
     margin-top: 60px;
-    position: relative;
 }
 
 
@@ -170,19 +193,19 @@ section a {
 
 .image_vente {
     height: 400px;
-    background: url(../images/SS21_NewArrivals_Site_MB.webp);
+    background: url(/SS21_NewArrivals_Site_MB.75f2898a.webp);
     background-size: cover;
 }
 
 .image_nouveaute {
     height: 400px;
-    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
     background-size: cover;
 }
 
 .image_soutien-gorge{
     height: 400px;
-    background: url(../images/SS21_Q1_CrossbackBra_EMEA_Site_MB.webp);
+    background: url(/SS21_Q1_CrossbackBra_EMEA_Site_MB.44c26217.webp);
     background-size: cover;
 }
 
@@ -193,10 +216,6 @@ section a {
 
 .main_txt-head{
     text-align: center;
-}
-
-.main_link{
-    margin-top: 100px;
 }
 
 .main_txt-head h3{
@@ -409,7 +428,7 @@ section a {
 
 .image_nouveaute {
     height: 250px;
-    background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+    background: url(/SS21_Run_Packable_Jacket_OldSite_BKT_M.3b5d3bfd.webp);
     background-size: cover;
 }
 .openCookie { 
@@ -513,3 +532,6 @@ section a {
         cursor: pointer;
         
     }
+
+
+/*# sourceMappingURL=/style.78032849.css.map */
