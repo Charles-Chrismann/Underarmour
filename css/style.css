@@ -50,7 +50,7 @@ section a {
 }
 
 .english, .langue, .point_vente, .compte {
-    margin: 0px 5px 5px 5px;
+    margin: 0px 15px 15px 5px;
 }
 
 .onglet{
@@ -60,13 +60,16 @@ section a {
 
 }
 
+.entete_txt{
+    margin: auto;
+}
+
 .entete_txt p{
     color: white;
     margin: 0 0 0 0;
     font-size: 13px;
     text-align: center;
     padding-top: 4px;
-    margin-left: 200px;
 
 }
 
@@ -81,19 +84,16 @@ section a {
         margin-left: 20px ;
         }
 
+        .entete_txt{
+            margin-left: 2px;
+        }
+
 }
 
 @media screen and (max-width: 768px) {
     .onglet{ 
         display: none;
- 
-}
-
-
-
-
-
-
+    }
 }
 
 /* LANGUES */
@@ -110,12 +110,25 @@ section a {
     background: white;
     padding: 5px;
     position: fixed;
+    z-index: 100;
+    right: 150px;
+    margin-bottom: 10px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    
+
+}
+
+.langue_list p a img {
+    margin-right: 8px;
 }
 
 .langue_list p a{
     color: black;
     font-size: 14px;
     font-weight: 400;
+    display: flex;
 }
 
 .langue_list p a:hover{
@@ -124,13 +137,11 @@ section a {
     transition: 0.3s;
 }
 
-.trait{
-    width: 10px;
-    height: 2px;
-}
-
 .voir_tous p a{
     font-weight:600;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    padding: 5px 5px 0;
 }
 
 /* corps du texte*/

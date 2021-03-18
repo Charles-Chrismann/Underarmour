@@ -1004,8 +1004,14 @@ accordeon(".accordeon h2");
 
 let fas = document.querySelector(".fas");
 let langue_list = document.querySelector(".langue_list");
+let langue = document.querySelector(".langue");
 
-fas.addEventListener("click", event => {
+fas.addEventListener("mouseover", event => {
+    langue_list.classList.toggle("hide"); 
+
+})
+
+langue_list.addEventListener("mouseout", event => {
     langue_list.classList.toggle("hide"); 
 })
 
