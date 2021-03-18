@@ -13,20 +13,28 @@
 }
 
 .sous-categorie{
-    padding-left: 20px;
     background-color: #e2e1dd;
     border-top: 1px solid #ccc;
-    padding: 12px 10px;
     display: flex;
     position: relative;
 }
 
+.sous-categorie a:hover{
+    color: red;
+}
+
+.sous-categorie a{
+    padding: 12px 10px;
+    width: 100%;
+    height: 100%;
+}
 
 .contenu{
     /*transition: min-height 10s linear;*/
     transition : max-height 1s linear;
     height: auto;
     max-height: 600px;
+    cursor: pointer;
 }
 
 .accordeon h2{
