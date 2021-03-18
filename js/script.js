@@ -818,9 +818,7 @@ function Menu() {
                 removeClass(hamburger.parentElement, 'hide', 'burger--show')
             }
     }
-     
      window.addEventListener( 'resize', debounce );
-
 }
 
 Menu.prototype.build = function (menus) {
@@ -870,7 +868,6 @@ Menu.prototype.createElementWithClass = function (className, type) {
     div.setAttribute('class', name.trim());
     return div;
 }
-
 
 Menu.prototype.navigationHead = function (title) {
     let div = this.createElementWithClass('mobile-nav-user', 'div');
@@ -926,11 +923,7 @@ function removeClass(elem, prevClass, nextClass){
     elem.className = elem.className.replace(regexp , nextClass);
 }
 
-
 new Menu();
-accordeon(".accordeon h2");
-
-
 
 // en-tête //
 

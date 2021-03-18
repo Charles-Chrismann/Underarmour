@@ -71,7 +71,6 @@ section a {
     font-size: 13px;
     text-align: center;
     padding-top: 4px;
-
 }
 
 .onglet img {
@@ -84,8 +83,6 @@ section a {
 }
 
 /* media queries */
-
-
 @media screen and (min-width: 768px) {
     .entete_txt p{
         text-align: left;
@@ -106,7 +103,6 @@ section a {
             display: flex;
             justify-content: space-between;
             text-align: center;
-           
         }
 
         .main_end{
@@ -141,7 +137,6 @@ section a {
             top: 40%;
             left: 50%;
              transform: translate(-50%, -50%);
-
         }
 
         .main_end .main_container .main_link{
@@ -161,7 +156,6 @@ section a {
         top:0; left:0;
         background:rgba(0,0,0,0.6);
         opacity: 0.5;
-       
         cursor: pointer;
         } 
 
@@ -179,22 +173,18 @@ section a {
             opacity: 1;
             z-index: 500 !important;
             border: 2px solid white;
-            font-weight:600;
-            
+            font-weight:600; 
         }  
 
         .main_container .button:hover{
             background: white;
             color: black !important;
-        
-
         }
 
         /* .main_container .img{
         background-color: black;
         z-index: 0;
         } */
-
 
 }
 
@@ -224,8 +214,6 @@ section a {
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     border-left: 1px solid #ccc;
-    
-
 }
 
 .langue_list p a img {
@@ -263,10 +251,6 @@ section a {
     margin-top: 60px;
     position: relative;
 }
-
-
-
-
 .main_image{
     width: 100%;
     margin-top: 60px;
@@ -295,7 +279,6 @@ section a {
     height: 400px;
     background: url(../images/SS21_Q1_Non-Slip-Waistband_EMEA_Site_MB.webp);
     background-size: cover;
-
 }
 
 .main_txt{
@@ -316,12 +299,7 @@ section a {
     font-size: 20px;
     font-weight: 400;
     color: #1d1d1d;
-
 }
-
-
-
-
 
 .main_link {
     text-align: center;
@@ -338,7 +316,6 @@ section a {
     padding: 7px 10px;
     cursor: pointer; 
 }
-
 
 .main_rubrique { 
     margin-top: 120x;
@@ -492,15 +469,15 @@ section a {
 }
 .footer_cookie { 
     position: fixed;
- top: 50%; left: 50%; 
- transform: translate(-50% -50%);
+    top: 50%; left: 50%; 
+    transform: translate(-50% -50%);
     border:solid black 1px;
     background-color: white;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
         
 }
-    
-    .footer_cookie h1 { font-weight: normal;
+
+.footer_cookie h1 { font-weight: normal;
     font-size: 14px;
     font-weight:600;
     }
@@ -513,19 +490,19 @@ section a {
     text-align: center;
     border-bottom: solid grey 1px;
    }
-   .footer_cookie_element1,
-   .footer_cookie_element2,
-   .footer_cookie_element3  { 
+
+.footer_cookie_element1,
+.footer_cookie_element2,
+.footer_cookie_element3  { 
     border: solid grey 1px;
     padding: 10px;
     margin: 10px;
     width: 480px;
     background:#fcfcfc;
     font-size: 14px;
-
    }
    
-   .footer_btnAnnuler{ 
+.footer_btnAnnuler{ 
     text-align:center;
     border: solid black 1px;
     padding: 10px;
@@ -536,7 +513,7 @@ section a {
     margin-bottom:12px;
     }
 
-     .footer_btnPreference{ 
+.footer_btnPreference{ 
     text-align:center;
     border: solid black 1px;
     padding: 10px;
@@ -547,35 +524,33 @@ section a {
     background-color: black;
     }
    
-    .footer_btnCookie{
-      display: flex; 
-      
-        }
+.footer_btnCookie{
+    display: flex; 
+}
     
-        .btn_Refuser{ 
-        border: solid grey 1px;
-        padding: 4px;
-        margin-left: 170px;
-            }
-
-    .btn_Accepter{
-        border: solid grey 1px;
-        padding: 4px;
+.btn_Refuser{ 
+    border: solid grey 1px;
+    padding: 4px;
+    margin-left: 170px;
     }
 
-    .footer_CookieBase p{
-        color: blue;
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 12px;
-    }
+.btn_Accepter{
+    border: solid grey 1px;
+    padding: 4px;
+}
+
+.footer_CookieBase p{
+    color: blue;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
     
-    .popclose {
-        position: relative;
-        height: 40px;
-        width: 40px;
-        margin-left: 97%;
-        margin-top: -6%;
-        cursor: pointer;
-        
-    }
+.popclose {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin-left: 97%;
+    margin-top: -6%;
+    cursor: pointer;
+}
