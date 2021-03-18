@@ -18,11 +18,14 @@ h1 {
     text-transform: uppercase;
 }
 
+a{
+    text-decoration: none;
+}
+
 section a {
     font-weight: 600;
     font-size: 12px;
     margin: 0 10px;
-    text-decoration: none;
     color: black;
 }
 
