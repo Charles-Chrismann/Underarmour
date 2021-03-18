@@ -2,7 +2,8 @@ function Carrousel(element, options = {}){
     this.element = element;
     this.options = Object.assign({}, {
         slidesToScroll: 1,
-        slidesVisible: 1
+        slidesVisible: 1,
+        loop: false
     }, options);
 
 
@@ -43,18 +44,19 @@ Carrousel.prototype.setStyle = function(){
 
 
 Carrousel.prototype.createNavigation = function(){
-    let nextbutton = this.createDivWithClass('carousel__next');
-    nextbutton.textContent = ">"
-    let prevbutton = this.createDivWithClass('carousel__prev');
-    prevbutton.textContent = "<"
-    this.root.appendChild(nextbutton);
-    this.root.appendChild(prevbutton);
+    let nextbutton = document.querySelector('.owl-prev');
+   // nextbutton.textContent = ">"
+    let prevbutton =  document.querySelector('.owl-next');
+   // prevbutton.textContent = "<"
+    //this.root.appendChild(nextbutton);
+    //this.root.appendChild(prevbutton);
+
+    console.log(nextbutton)
     prevbutton.addEventListener('click', this.prev.bind(this));
     nextbutton.addEventListener('click', this.next.bind(this));
 }
 
 Carrousel.prototype.next = function(e){
-    alert()
     console.log(this.options.slidesToScroll);
     this.goToItem(this.currentSlide + this.options.slidesToScroll);
 }

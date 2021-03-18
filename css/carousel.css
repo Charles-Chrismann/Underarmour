@@ -4,17 +4,16 @@
 
 .carousel{
     position: relative;
-    height: 519px;
+    overflow: hidden;
 }
 
 .carousel__item{
     padding: 10px;
-    float: left;
 }
 
 .item{
     margin: 40px 10px;
-    box-shadow: 0 15px 35px #ddd, 0 5px 15px rgb(255, 255, 255);
+    box-shadow: 0 0 34px #eee;
     transition: transform 0.3s;
     transform: translate3d(0, -1px, 0);
 }
@@ -22,14 +21,15 @@
 .carrousel__container{
     transition: transform 0.3s;
     transform: translate3d(0, -1px, 0);
+    display: flex;
 }
 
 
-/* .carousel__container:after{
+ .carousel__container:after{
     content: '';
     clear: both;
     display: table;
-} */
+} 
 
 .carousel__container{
     transition: transform .3s;
@@ -47,8 +47,6 @@
 
 .owl-controls{
     position: absolute;
-    height: 300px;
-    height: 100%;
     right: 0;
     width: 100%;
     top: 50%;
