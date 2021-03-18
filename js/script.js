@@ -1,19 +1,41 @@
 let element = document.querySelector(".openCookie")
 let cookie = document.querySelector(".footer_cookie")
+let cookieParent = document.querySelector(".footer_cookie_parent")
 let cookieClose = document.querySelector(".popclose")
+let spinner = document.querySelector(".spiner")
 
-console.log(element)
-// element.addEventListener ('click', event => {
-//     console.log(event);
-//  cookie.classList.toggle("hide")   
-    
-// })
 
-// cookieClose.addEventListener ('click', event => {
-//     console.log(event);
-//     cookie.style.display='none';
+
+
+
+// element.addEventListener ('click', event => { 
+//     spinner.classList.toggle("hide")   
+//    ;});
+
+
+   
+
+ element.addEventListener ('click', event => {   
     
-// })
+    cookie.classList.remove("hide")
+    setTimeout(function(){  
+        spinner.classList.add("hide") 
+        cookieParent.classList.remove("hide")
+        // cookie.classList.toggle("hide")
+       },2000)
+   
+  } ); 
+
+
+
+
+ cookieClose.addEventListener ('click', event => {
+    console.log(event);
+    spinner.style.display='none';
+    cookie.style.display='none';
+    
+ })
+
 
 // let plusOuMoin = 0
 
