@@ -2,6 +2,39 @@
     padding: 0 60px;
 }
 
+.carousel{
+    position: relative;
+    height: 519px;
+}
+
+.carousel__item{
+    padding: 10px;
+    float: left;
+}
+
+.item{
+    margin: 40px 10px;
+    box-shadow: 0 15px 35px #ddd, 0 5px 15px rgb(255, 255, 255);
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+}
+
+.carrousel__container{
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+}
+
+
+/* .carousel__container:after{
+    content: '';
+    clear: both;
+    display: table;
+} */
+
+.carousel__container{
+    transition: transform .3s;
+}
+
 .recommendation_carousel{
     position: relative;
 }

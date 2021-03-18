@@ -244,21 +244,21 @@ function Menu() {
                         {
                             id: 26,
                             name: "Chaussures de course",
-                            cat_id: 5,
+                            cat_id: 6,
                             link: "https://www.underarmour.fr/fr-fr/enfants/chaussures/chaussures-de-course/",
                             childrens: false
                         },
                         {
                             id: 27,
                             name: "Chaussures de basket",
-                            cat_id: 5,
+                            cat_id:6,
                             link: "https://www.underarmour.fr/fr-fr/enfants/chaussures/chaussures-de-basket/",
                             childrens: false
                         },
                         {
                             id: 28,
                             name: "Chaussures sportstyle",
-                            cat_id: 5,
+                            cat_id: 6,
                             link: "https://www.underarmour.fr/fr-fr/enfants/chaussures/chaussures-sportstyle/",
                             childrens: false
                         }
@@ -903,10 +903,10 @@ Menu.prototype.build = function (menus) {
                 let menu = menus.find(menu => menu.id == cat_id);
                 let ifNextIdUl = item.closest('ul').getAttribute('id');
                 
-                let menu_title = '< Menu Principal';
+                let menu_title = '<i class="fas fa-chevron-left"></i> Menu Principal';
                 if(ifNextIdUl){
                     let menu = self.menus.find(menu => menu.id == ifNextIdUl);
-                    menu_title = '< ' + menu.name;
+                    menu_title = '<i class="fas fa-chevron-left"></i> ' + menu.name;
                 }
                 let lists = self.createUl( menu_title, 'list-item', e.target, menu.childrens);
                 insertAfter(listIsActive, lists);
@@ -928,7 +928,14 @@ Menu.prototype.build = function (menus) {
 
 Menu.prototype.createElementWithClass = function (className, type) {
     let div = document.createElement(type);
-    div.setAttribute('class', className);
+    let name = '';
+    if(typeof className === 'object'){
+        for (let index = 0; index < className.length; index++){
+            name += className[index] + ' ';
+        }
+            
+    }else{ name = className; }
+    div.setAttribute('class', name.trim());
     return div;
 }
 
@@ -946,13 +953,15 @@ Menu.prototype.createUl = function (title, className, firstTitle, arr) {
     let li = document.createElement('li');
     let a = document.createElement('a');
     li.className = "mobile-nav-user";
-    a.textContent = title;
+    a.className = 'nav_head_link';
+    a.innerHTML = title;
     li.appendChild(a)
     ul.appendChild(li);
     if (firstTitle) {
         ul.setAttribute('id', firstTitle.closest('li').getAttribute('id'))
         let liTitle = document.createElement('li');
-        let clone = firstTitle.cloneNode(true)
+        let clone = firstTitle.cloneNode(true);
+        console.log(clone.lastChild.remove());
         liTitle.appendChild(clone);
         ul.appendChild(liTitle);
     }
@@ -963,12 +972,10 @@ Menu.prototype.createUl = function (title, className, firstTitle, arr) {
         let a = document.createElement('a');
         a.textContent = item.name;
         if (item.childrens) {
-            let i = 
+            let i = this.createElementWithClass(['fas', 'fa-chevron-right']);
             li.setAttribute('id', item.id);
-           // a.appendChild(<i class="fas fa-chevron-right"></i>);
-            
+            a.appendChild(i); 
         }
-        
         a.setAttribute('href', item.link);
         li.appendChild(a);
         ul.appendChild(li);

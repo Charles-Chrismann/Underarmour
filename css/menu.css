@@ -21,7 +21,14 @@
     color: #fff;
 }
 
+.nav_head_link{
+   justify-content: left !important;
+   color: #fff !important;
+}
 
+.nav_head_link i{
+    margin-right: 10px;
+ }
 
 .header-icons-left svg{
     cursor: pointer;
@@ -80,9 +87,11 @@
     font-size: 14px;
     font-weight: 400;
     color: #1d1d1d;
-    padding: 18px 35px 14px 25px;
+    padding: 18px 20px 14px 25px;
     display: block;
     line-height: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navigation-mobile.mobile-nav-open{
