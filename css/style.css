@@ -185,6 +185,9 @@ section a {
         background-color: black;
         z-index: 0;
         } */
+        .footer_version_responsive{
+            display: none;
+        }
 
         .main_rubrique-txt h2{
             font-size: 50px;
@@ -210,7 +213,11 @@ section a {
 
 @media screen and (max-width: 768px) {
     .onglet{ 
+        display: none;}
+
+    .footer_version_desktop{
         display: none;
+
     }
 
     .main_rubrique h2 {
@@ -233,6 +240,7 @@ section a {
         margin: 0 70px 5px 70px;
     }
 
+    
 }
 
 /* LANGUES */
@@ -391,95 +399,6 @@ section a {
     margin-bottom: 10px;
 }
 
-/* footer */
-    footer { 
-        background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
-        margin-top: 100px;
-        padding-bottom: 30px;
-        border-top: 5px solid #1d1d1d;
-        clear: both;
-        color: #1d1d1d;
-        min-height: 200px;
-        width: auto;   
-    }
-    .footer_link {
-        margin-top: 30px;
-    }
-    .footer_link a{ 
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 12px;
-        font-size: 16px;
-        font-weight: 300;
-        color: #5a5a5a;
-        font-family:Arial,sans-serif;
-    }
-    .footer_link a:hover{
-        color: red;
-    }
-    .footer_content { 
-       margin-top: 40px;
-        margin-left: 20px;
-        padding: 0px; 
-        font-size: 13px;
-    }
-    #boutonMail { 
-        height: 44px;
-        width: 100px;
-        border-radius: 5px;
-        margin-right: 10px;
-         }
-        
-    .footer_content input { 
-       font-size: 13px;
-       flex: 1 0 60%;
-       margin-right: 10px;  
-    }
-
-    .footer_input { 
-        display: flex;
-        justify-content: center;
-    }
-    ::placeholder{
-        color: black !important;
-       font-weight: 400;
-    }
-
-    #logo_bas { 
-    height: 50px;
-    width: 50px;
-    display: block;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-    }
-
-    .footer_txt_logo { 
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .footer_copyright {
-        font-size: 12px;
-        text-align: center;
-
-    }
-
-    .footer_link2 a{ 
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 12px;
-        font-size: 14px;
-        color: black;
-        font-family:Arial,sans-serif;
-        font-weight: 300;
-    }
-    .footer_link2 a:hover{
-        color:red
-    }
 
 .image_nouveaute {
     height: 400px;
@@ -499,13 +418,21 @@ section a {
     display:block;
 }
 .footer_cookie { 
+    height: 731px;
+    width: 522px;
     position: fixed;
-    top: 50%; left: 50%; 
-    transform: translate(-50% -50%);
+    top: 53%;
+    left: 50%;
+    transform:translate(-50%, -50%);
     border:solid black 1px;
     background-color: white;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-        
+     z-index:100;   
+}
+.footer_cookie_parent {
+    height: 731px;
+    width: 522px;  
+    
 }
 
 .footer_cookie h1 { font-weight: normal;
@@ -514,6 +441,7 @@ section a {
     }
     .footer_cookie p { 
         color: grey;
+        font-size: 8px;
         }
     
 
@@ -542,6 +470,7 @@ section a {
     width: 440px;
     margin-top: 20px;
     margin-bottom:12px;
+    cursor: pointer;
     }
 
 .footer_btnPreference{ 
@@ -553,35 +482,254 @@ section a {
     width: 440px;
     color: white;
     background-color: black;
+    cursor: pointer;
     }
    
-.footer_btnCookie{
-    display: flex; 
-}
+    .footer_btnCookie{
+      display: flex; 
+        }
     
-.btn_Refuser{ 
-    border: solid grey 1px;
-    padding: 4px;
-    margin-left: 170px;
+        .btn_Refuser{ 
+        border: solid grey 1px;
+        padding: 4px;
+        margin-left: 170px;
+        cursor: pointer;
+            }
+
+    .btn_Accepter{
+        border: solid grey 1px;
+        padding: 4px;
+        cursor: pointer;
     }
 
-.btn_Accepter{
-    border: solid grey 1px;
-    padding: 4px;
+    .footer_CookieBase p{
+        color: blue;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    
+    .popclose {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin-left: 97%;
+        margin-top: -6%;
+        cursor: pointer;  
+    }
+    .spiner{
+        height: 100px;
+        width: 100px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%; left: 40%;
+        transform: translate(50%, 50%,)
+    }
+    
+    .img_spiner { 
+        
+        height: 100px;
+        width: 100px;
+    }
+
+
+
+
+    /* Footer Desktop */
+
+    .titre_footer{ 
+        display: flex;
+        justify-content: center;
+    }
+    .titre_footer section {
+        justify-content: space-around;
+        margin-left: 50px;
+        font-size: 12px;
+    }
+    #footer_dcontact p { 
+        margin-bottom:22px;
+        cursor: pointer;
+    }
+
+    .footer_content_desktop { 
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-left: 140px;
+        
+     }
+
+     .footer_input_desktop { 
+        display: flex;
+        height: 44px;
+        width: 200px;
+        
+     }
+     
+     .footer_content_desktop input { 
+            font-size: 13px;
+            height: 44px;
+            width:144px;
+            margin-right: 10px;  
+            margin-left: 10px;
+         }
+    
+    ::placeholder{
+        color: rgb(224, 192, 192) !important;
+       font-weight: 400;
+    }
+
+
+    .logo_footer_desktop { 
+        margin-left: 130px;
+        margin-top: 25px;
+    }
+
+
+    .footer_vente_commande {
+        margin-left: 70px;
+    }
+
+    .titre_footer section ul{
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .titre_footer section ul:hover { 
+        margin-bottom: 10px;
+        color: red;
+    }
+   
+    .titre_footer section h3:hover{
+        color:red
+    }
+    #footer_dcondition {
+        font-size: 13px;
+        margin-left: 20px;
+        
+    }
+
+    #boutonMailDesktop { 
+        height: 44px;
+        width: 150px;
+        border-radius: 5px;
+        margin-right: 10px;
+         }
+
+#boutonWhere{ 
+height:18px;
+width:18px;
 }
 
-.footer_CookieBase p{
-    color: blue;
+#boutonCarre{
+    height:18px;
+    width:18px;
+}
+
+/* footer */
+footer { 
+    background:linear-gradient(to bottom,rgba(195,195,195,0) 65%,rgba(195,195,195,.65) 100%) #f0f0f0;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    border-top: 5px solid #1d1d1d;
+    clear: both;
+    color: #1d1d1d;
+    min-height: 200px;
+    width: auto;   
+}
+
+/* footer responsive */
+
+.footer_version_respnsive{
+    display: none;
+}
+
+.footer_link {
+    margin-top: 30px;
+}
+.footer_link a{ 
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 12px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #5a5a5a;
+    font-family:Arial,sans-serif;
 }
+.footer_link a:hover{
+    color: red;
+}
+.footer_content { 
+   margin-top: 40px;
+    margin-left: 20px;
+    padding: 0px; 
+    font-size: 13px;
+}
+#boutonMail { 
+    height: 44px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+     }
     
-.popclose {
-    position: relative;
-    height: 40px;
-    width: 40px;
-    margin-left: 97%;
-    margin-top: -6%;
-    cursor: pointer;
+.footer_content input { 
+   font-size: 13px;
+   flex: 1 0 60%;
+   margin-right: 10px;  
 }
+
+.footer_input { 
+    display: flex;
+    justify-content: center;
+}
+::placeholder{
+    color: black !important;
+   font-weight: 400;
+}
+
+#logo_bas { 
+height: 50px;
+width: 50px;
+display: block;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 8px;
+}
+
+.footer_txt_logo { 
+    font-size: 10px;
+    text-align: center;
+}
+
+.footer_copyright {
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.footer_link2 a{ 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    color: black;
+    font-family:Arial,sans-serif;
+    font-weight: 300;
+}
+.footer_link2 a:hover{
+    color:red
+}
+
+.image_nouveaute {
+height: 250px;
+background: url(../images/SS21_Run_Packable_Jacket_OldSite_BKT_M.webp);
+background-size: cover;
+}
+.openCookie { 
+cursor: pointer;
+}
+
