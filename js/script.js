@@ -939,5 +939,3 @@ fas.addEventListener("mouseover", event => {
 langue_list.addEventListener("mouseout", event => {
     langue_list.classList.toggle("hide"); 
 })
-
-
