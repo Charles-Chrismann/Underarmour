@@ -118,6 +118,7 @@ ol, ul {
 
 header{
     position: fixed;
+    min-width: 411px;
     top: 0;
     left: 0;
     right: 0;
