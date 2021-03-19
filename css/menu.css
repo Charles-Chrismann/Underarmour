@@ -3,9 +3,7 @@
     display: flex;
 }
 
-.navigation-mobile nav:last-child{
-    //top: 329px;
-}
+
 
 .navigation-mobile {
     position: fixed;
@@ -21,9 +19,6 @@
     transition: transform 260ms ease-in-out 100ms;
 }
 
-.navigation-mobile .primary-nav:last-child{
-    //margin-top: 20px !important;
-}
 
 
 .mobile-nav-user a {
