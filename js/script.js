@@ -2,8 +2,6 @@ let element = document.querySelector(".openCookie")
 let cookie = document.querySelector(".footer_cookie")
 let cookieClose = document.querySelector(".popclose")
 
-console.log(element)
-
 
 function Menu() {
     let self = this;
@@ -928,9 +926,6 @@ function removeClass(elem, prevClass, nextClass){
 
 
 new Menu();
-accordeon(".accordeon h2");
-
-
 
 // en-tête //
 

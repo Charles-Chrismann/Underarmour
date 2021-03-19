@@ -10,11 +10,13 @@ function Carrousel(element, options = {}){
     childrens = [].slice.call(element.children);
     
    // let childrens = [...element.children];
-    let ratio = childrens.length / this.options.slidesVisible;
+    this.isMobile = true;
+    this.isIPad = true;
+    this.isDesktop = true;
+    this.isFullDesktop = true;
     this.root  = this.createDivWithClass('carousel');
     this.currentSlide = 0;
     this.container  = this.createDivWithClass('carousel__container'); 
-    this.container.style.width = (ratio * 100) + "%"
     this.root.appendChild(this.container);
     this.element.appendChild(this.root);
    
@@ -24,9 +26,11 @@ function Carrousel(element, options = {}){
         this.container.appendChild(item);
         return item;
     });
-    console.log(this.items)
     this.setStyle();
     this.createNavigation();
+
+    this.onwindownResize();
+    window.addEventListener( 'resize', this.onwindownResize.bind(this));
 }
 
 
@@ -37,27 +41,72 @@ Carrousel.prototype.createDivWithClass = function(className){
 }
 
 Carrousel.prototype.setStyle = function(){
-    let ratio = this.items.length / this.options.slidesVisible;
+    let ratio = this.items.length / this.slidesVisible();
     this.container.style.width = (ratio * 100) + "%";
-    this.items.forEach(item => item.style.width = ((100 / this.options.slidesVisible) / ratio) + "%");
+    this.items.forEach(item => item.style.width = ((100 / this.slidesVisible()) / ratio) + "%");
+}
+
+Carrousel.prototype.slidesToScroll = function(){
+    return this.isMobile ? 1 : this.options.slidesToScroll;
+}
+
+Carrousel.prototype.slidesVisible = function(){
+    return this.isMobile ? 1 : this.options.slidesVisible;
+}
+
+Carrousel.prototype.onwindownResize = function(){
+    let mobile = window.innerWidth < 768;
+    let ipad = window.innerWidth >= 768 && window.innerWidth < 870;
+    let isDesktop = window.innerWidth >= 870 && window.innerWidth < 992;;
+    let isFullDesktop = window.innerWidth >= 992;
+    if(mobile != this.isMobile){
+        this.isMobile = mobile;
+        this.setStyle();
+    }else if(ipad != this.isIPad){
+        this.isIPad = ipad;
+        this.setStyle();
+    }else if(ipad != this.isDesktop){
+        this.isDesktop = isDesktop;
+        this.setStyle();
+    }else if(isFullDesktop != this.isFullDesktop){
+        this.isFullDesktop = isFullDesktop;
+        this.setStyle();
+    }
 }
 
 
+
 Carrousel.prototype.createNavigation = function(){
-    let nextbutton = document.querySelector('.owl-prev');
+    let nextbutton = document.querySelector('.owl-next');
    // nextbutton.textContent = ">"
-    let prevbutton =  document.querySelector('.owl-next');
+    let prevbutton =  document.querySelector('.owl-prev');
    // prevbutton.textContent = "<"
     //this.root.appendChild(nextbutton);
     //this.root.appendChild(prevbutton);
 
-    console.log(nextbutton)
     prevbutton.addEventListener('click', this.prev.bind(this));
     nextbutton.addEventListener('click', this.next.bind(this));
 }
 
+Carrousel.prototype.slidesToScroll = function(){
+    console.log(this.isMobile)
+    return this.isMobile ? 1 : 
+           this.isIPad ? 3 : 
+           this.isDesktop ? 4 : 
+           this.isFullDesktop ? 5 : 
+           this.options.slidesToScroll;
+}
+
+Carrousel.prototype.slidesVisible = function(){
+    return  this.isMobile ? 1 : 
+            this.isIPad ? 3 : 
+            this.isDesktop ? 4 : 
+            this.isFullDesktop ? 5 : 
+            this.options.slidesToScroll;
+}
+
+
 Carrousel.prototype.next = function(e){
-    console.log(this.options.slidesToScroll);
     this.goToItem(this.currentSlide + this.options.slidesToScroll);
 }
 
@@ -67,10 +116,11 @@ Carrousel.prototype.prev = function(e){
 
 Carrousel.prototype.goToItem = function(index){
     if(index < 0){
-        index = this.items.length - this.options.slidesVisible;
-    }else if(index >= this.items.length || this.items[this.currentSlide + this.options.slidesVisible] === undefined){
-        index = 0;
+       index = this.items.length - this.options.slidesVisible;
+     }else if(index >= this.items.length || this.items[this.currentSlide + this.options.slidesVisible] === undefined){
+       index = 0;
     }
+
     let translateX = index *  -100 / this.items.length;
     this.container.style.transform = 'translate3d(' + translateX + '%, 0, 0)';
     this.currentSlide = index;
@@ -79,7 +129,37 @@ Carrousel.prototype.goToItem = function(index){
 //debugger;
 document.addEventListener("DOMContentLoaded", (event) => {
     new Carrousel(document.querySelector('#carousel'), {
-        slidesToScroll: 1,
-        slidesVisible: 1,
-    });
+                    slidesToScroll: 3,
+                    slidesVisible: 3
+                });
 });
+// let options = {};
+// let tmp = {};
+// function resizeCarousel(){
+   
+//     if(window.innerWidth < 768){
+//         options = {
+//             slidesToScroll: 1,
+//             slidesVisible: 1
+//         }
+//     }else if(window.innerWidth >= 768 && window.innerWidth < 870){
+//         options = {
+//             slidesToScroll: 3,
+//             slidesVisible: 3
+//         }
+//     }else if(window.innerWidth > 870){
+//         options = {
+//             slidesToScroll: 4,
+//             slidesVisible: 4
+//         }
+//     }
+//     if(tmp.slidesVisible != options.slidesVisible){
+        
+//     }
+  
+//     tmp =  window.innerWidth;
+    
+// }
+
+// resizeCarousel();
+//window.addEventListener( 'resize', resizeCarousel);
