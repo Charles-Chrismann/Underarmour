@@ -3,7 +3,7 @@ function Menu() {
     this.defaultMenus = [];
     this.hamburger = document.querySelector('.hamburger');
     this.hamburger.addEventListener('click', this.handleBurgerMenu.bind(this));
-    fetchData("/json/menu.json").then(data => {
+    fetchData("json/menu.json").then(data => {
         this.menus = this.mergeData(data.menu_link);
         this.defaultMenus = data.default_menu;
         return  this.menus;
