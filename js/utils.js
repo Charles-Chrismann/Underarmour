@@ -15,7 +15,6 @@ function _fetchData(url){
     });
 }
 
-
 function _insertAfter(element, newElement) {
     element.parentNode.insertBefore(newElement, element.nextSibling);
 }
