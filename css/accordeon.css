@@ -1,75 +1,98 @@
-/*partie accordeon*/
-.accordeon {
-    height: auto;
-    margin-top: 50px;
-    overflow: hidden;
-}
 
-.categorie_meilleurs_ventes,
-.categorie_tendances_hommes,
-.categorie_tendances_femmes,
-.categorie_tendances{
-    background-color: #e9e9e9;
-}
 
-.sous-categorie{
-    background-color: #e2e1dd;
-    border-top: 1px solid #ccc;
-    display: flex;
-    position: relative;
-}
+@media screen and (max-width: 768px){
 
-.sous-categorie a:hover{
-    color: red;
-}
+    /*partie accordeon*/
+    .accordeon {
+        height: auto;
+        margin-top: 50px;
+        overflow: hidden;
+    }
 
-.sous-categorie a{
-    padding: 12px 10px;
-    width: 100%;
-    height: 100%;
-}
+    .categorie_meilleurs_ventes,
+    .categorie_tendances_hommes,
+    .categorie_tendances_femmes,
+    .categorie_tendances{
+        background-color: #e9e9e9;
+    }
 
-.contenu{
-    /*transition: min-height 10s linear;*/
-    transition : max-height 1s linear;
-    height: auto;
-    max-height: 600px;
-    cursor: pointer;
-}
+    .sous-categorie{
+        background-color: #e2e1dd;
+        border-top: 1px solid #ccc;
+        display: flex;
+        position: relative;
+    }
 
-.accordeon h2{
-    background-color: #e2e1dd;
-    padding: 12px 10px;
-    cursor: pointer;
-    border-top: 1px solid #ccc;
-    margin: 0;
-    font-size: 16px;
-    overflow: hidden;
-}
+    .sous-categorie a:hover{
+        color: red;
+    }
 
-.accordeon a i{
-    right: 22px;
-    overflow: hidden;
-    position: absolute;
-}
+    .sous-categorie a{
+        padding: 12px 10px;
+        width: 100%;
+        height: 100%;
+    }
 
-.accordeon h2 i{
-    position: absolute;
-    right: 20px;
-    overflow: hidden;
-}
+    .contenu{
+        transition : max-height .3s linear;
+        height: auto;
+        max-height: 600px;
+        cursor: pointer;
+    }
 
-.accordeon h2 i{
-    color: red;
-    font-weight: 900;
+    .accordeon h2{
+        background-color: #e2e1dd;
+        padding: 12px 10px;
+        cursor: pointer;
+        border-top: 1px solid #ccc;
+        margin: 0;
+        font-size: 16px;
+        overflow: hidden;
+    }
+
+    .accordeon a i{
+        right: 22px;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .accordeon h2 i{
+        position: absolute;
+        right: 20px;
+        overflow: hidden;
+    }
+
+    .accordeon h2 i{
+        color: red;
+        font-weight: 900;
+        
+    }
+
+    .showAccordeon{
+        height: auto;
+    }
+
+    .hideAccordeon{
+        overflow: hidden;
+        max-height: 0;
+    }
     
 }
 
-.showAccordeon{
-    height: auto;
-}
 
-.hideAccordeon{
-    overflow: hidden;
-    max-height: 0;
+@media screen and (min-width: 768px){
+    .accordeon{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .accordeon i{
+       display: none;
+    }
+
+    .accordeon .sous-categorie a{
+        font-weight: 400 !important;
+        font-size: 14px;
+        line-height: 28px;
+    }
 }

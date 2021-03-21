@@ -1,0 +1,20 @@
+{
+  "name": "Underarmour",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "browser-sync start --server --files='css/*.css, js/*.js, *.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charles-Chrismann/Underarmour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charles-Chrismann/Underarmour/issues"
+  },
+  "homepage": "https://github.com/Charles-Chrismann/Underarmour#readme",
+  "description": ""
+}
